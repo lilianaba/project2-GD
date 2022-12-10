@@ -19,14 +19,16 @@ Bar.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        rating: {
-            type: DataTypes.FLOAT,
-            defaultValue: 0,
-            references: {
-                model: 'bar',
-                key: 'rating'
-            }
-        },
+
+        //we dont neeed rating here, the calculation will go in the dashboard route
+        // rating: {
+        //     type: DataTypes.FLOAT,
+        //     defaultValue: 0,
+        //     references: {
+        //         model: 'bar',
+        //         key: 'rating'
+        //     }
+        // },
     },
     {
         sequelize,
