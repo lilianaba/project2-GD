@@ -12,10 +12,10 @@ document.getElementById("dateInput").addEventListener("change", function() {
     // The users input (DOB)
     let input = this.value;
     console.log(input);
-
+    // Makes a new date value for the users input 
     let dateInput = new Date(input);
     console.log(dateInput);
-
+// Creates a date of now, and 
     let now = new Date();
     let userDOB = input.split("-");
     let born = new Date(userDOB[0], userDOB[1] - 1, userDOB[2]);
@@ -25,7 +25,7 @@ document.getElementById("dateInput").addEventListener("change", function() {
     console.log(age);
 
     if (age <= 18) {
-        alert("Sorry! it appears youare under the age of 18 and are not permitted to enter this site");
+        alert("Sorry! it appears you are under the age of 18 and are not permitted to enter this site!");
         return false; 
     }
 });
