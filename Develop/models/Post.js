@@ -45,7 +45,6 @@ Post.init(
         rating: {
             type: DataTypes.FLOAT,
             allowNull: false,
-            primaryKey: true,
             validate: {
                 min: 1,
                 max: 5
