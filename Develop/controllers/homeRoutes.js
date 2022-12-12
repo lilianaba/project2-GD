@@ -1,5 +1,5 @@
-const router = require('express').Router();
+// const router = require('express').Router();
 
-router.get('/', async (req, res) => {
+// router.get('/', async (req, res) => {
 
-      res.render('./public/js/age.js')});
+//       res.render('./public/js/age.js')});
