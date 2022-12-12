@@ -1,7 +1,7 @@
 
 
 const User = require('./User');
-const Bar = require('./Bar');
+// const Bar = require('./Bar');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
@@ -40,7 +40,7 @@ Comment.belongsTo(Post, {
 // });
 
 
-module.exports = {User, Post, Bar, Comment};
+module.exports = {User, Post, Comment};
 
 
 

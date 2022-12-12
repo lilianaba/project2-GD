@@ -1,12 +1,26 @@
 // gets the models
-const { User, Post, Comment, Bar } = require('../../models');
+const { User, Post, Comment } = require('../../models');
+const { Bar } = require('../../models/Bar');
 // sets up the Express Router
 const router = require('express').Router();
 // this will connect in the helpers utils - for them to only be able to acces once logged in
-const withAuth = require('../../utils/auth');
+// const withAuth = require('../../utils/auth');
 //=======================================================================
 // To create a new post(review) the user will use the method POST
-router.post('/review', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
+    try {
+    const barData = await Bar.findAll();
+  
+      const users = barData.map((project) => project.get({ plain: true }));
+  
+      res.json(users);
+
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+router.post('/', async (req, res) => {
 
     try {
 
@@ -37,7 +51,7 @@ router.post('/review', withAuth, async (req, res) => {
 
 //=======================================================================
 // To delete a post(review) the user will use the method DELETE and use the params.id to select
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
 console.log("DELETING A REVIEW")
  try {
 const postData = await Post.destroy({
