@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tipsy_db;
+
+CREATE DATABASE tipsy_db;
