@@ -1,6 +1,6 @@
-const { User } = require('../models')
+const { Comment } = require('../models')
 
-const userData = [
+const commentData = [
 {
     title: "Local Delight",
     comment_content: "The venue is delivering a full service bar, fronted by ten taps pouring a great range of Adelaide brewed beers, plus a huge selection of locally sourced gin.",
@@ -21,6 +21,6 @@ const userData = [
 },
 ]
 
-const seedUsers =() => User.bulkCreate(userData);
+const seedComments = () => Comment.bulkCreate(commentData);
 
-module.exports = seedUsers; 
+module.exports = seedComments; 
