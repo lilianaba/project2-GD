@@ -1,6 +1,6 @@
-const { User } = require('../models')
+const { Bar } = require('../models')
 
-const userData = [
+const barData = [
 {
     name: "1000 Island",
     address: "15 Solomon St, Adelaide SA 5000",
@@ -15,6 +15,6 @@ const userData = [
 }
 ]
 
-const seedUsers = () => User.bulkCreate(userData);
+const seedBars = () => Bar.bulkCreate(barData);
 
-module.exports = seedUsers; 
+module.exports = seedBars; 

@@ -1,7 +1,5 @@
-
-
 const User = require('./User');
-// const Bar = require('./Bar');
+const Bar = require('./Bar');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
@@ -32,15 +30,16 @@ Comment.belongsTo(Post, {
 });
 
 // Post.hasMany(Bar, {
-//     foreignKey: 'rating'
+//     foreignKey: 'bar_id'
 // });
 
 // Bar.belongsTo(Post, {
-//     foreignKey: 'rating'
+//     foreignKey: 'bar_id'
 // });
 
+Post.belongsTo(Bar, {
+    foreignKey: 'bar_id'
+});    
 
-module.exports = {User, Post, Comment};
 
-
-
+module.exports = {User, Post, Comment, Bar};
