@@ -35,10 +35,10 @@ User.init(
         len: [5,10],
       },
     },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // age: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
   },
   {
     hooks: {
