@@ -16,9 +16,32 @@
     position: relative;
     font-family: "Goudy Bookletter 1911", sans-serif;
     font-size: 20px;
-    background-color: #FDF8F5;
+    /* background-color: #FDF8F5; */
     color: #4F4846;
   }  
+
+  .age{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: greenyellow solid 3px;
+    text-align: center;
+    height: 95vh;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    /* z-index: -1; */
+    background-size: cover;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
 
   main{
     flex-wrap: wrap;
@@ -44,7 +67,7 @@
     align-items: center;
     width: 100%;
     font-size: 80px;
-    background-color:var(--background);
+    /* background-color:var(--background); */
 
   }
 

@@ -25,7 +25,8 @@ document.getElementById("dateInput").addEventListener("change", function() {
     console.log(age);
 
     if (age <= 18) {
-        alert("Sorry! it appears you are under the age of 18 and are not permitted to enter this site!");
+
+        alert("Sorry! it appears you are under the age of 18 and are not permitted to enter this site!\nTry in X days");
         return false; 
     }
 });

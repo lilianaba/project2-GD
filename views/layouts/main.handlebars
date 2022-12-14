@@ -9,28 +9,85 @@
     <title>TIPSY AGE VERIFICATION</title>
 </head>
 <body>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:600,900,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:600,900,400' rel='stylesheet' type='text/css'>
 
-<main>
-  <article class="box">
- <div class="overlay-verify">
-    <div class="box">
-      <h3>Age Verification</h3>
-      <p>Please enter your date of birth:</p>
-      <input type="date" id="dateInput" name="bday"></input>
-      <input type="submit" id="change" value="Submit">
-
-      {{{body}}}
-      <!-- <a href="#" class="btn btn-alpha"  id="refresh-page">ENTER</a> -->
-     </div>  
-      <p id="caption">Be respectful and always drink responsibily.</p>
-   
-    </div>
-  </article>
   
- </div>
-</main>
-{{!-- <script src="./public/js/age.js"></script> --}}
+
+ <div class="flex-column justify-space-around">
+
+<video autoplay muted loop id="myVideo" src="/public/media/glass.mp4" type="video/mp4">
+  {{!-- <source src="/public/media/glass.mp4" type="video/mp4"> --}}
+</video>
+  
+    <div class="age">
+      <h1>Age Verification
+      <p>Please enter your date of birth:</p>
+      <form >
+      <input type="date" id="dateInput" name="bday"></input>
+      <input type="submit" id="submit" value="Submit">
+      </form>
+      
+    
+     
+
+      </h1>
+
+      
+<script>
+src="/public/js/age.js"
+console.log("this was the date selected: " + dateInput);
+
+</script>
+
+    </div>
+    
+    
+    
+    
+    
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+
+   
+    {{#if age}}
+    <script src="/public/js/age.js"></script>
+   
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        {{!-- <a href="/profile">profile</a> | --}}
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+   
+
+
+
+    {{{ body }}}
+
+     {{/if}}
+
+    
+    
+    
+    
+    </main>
+
+
+
+
+    <footer>
+      <p id="caption">Be respectful and always drink responsibily.</p>
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
+
 </html>
 
