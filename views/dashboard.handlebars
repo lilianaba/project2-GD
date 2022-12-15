@@ -1,58 +1,15 @@
-<section>
-  <section>   
-    <div class="sortByOptions">
-      <select id="sortby">
-        <option value="asc">Higher First</option>
-        <option value="des">Lower First</option>
-      </select>
-    
+{{#each posts as |post|}}
+  <section>
+    <div>
+      <div class="barList">
+
+        <h2>{{post.title}}</h2>
+        {{!-- <p>{{{get_emoji}}}</p> --}}
+        <p>{{post.post_content}}</p>
+        <p>{{post.rating}}</p>
+        <p>{{format_date post.post_date}}</p>
+
+      </div>
     </div>
   </section>
-  <div>
-    <section id="mainContent">
-      <div class="barList">
-          
-
-  <h2>{{bar.name}}</h2>
-  {{!-- <p>{{{get_emoji}}}</p> --}}
-  <p>{{Post.post_content}}</p>
-  <p>{{Post.rating}}</p>
-  <p>Posted by {{user.username}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-
-
-        
-      </div>
-
-      <section id="left">
-        <div>
-          <input type="button" onclick="alert('Making a new Post!')" value="Make a new Post">
-        </div>
-        <details>
-          <div class="barDetails">
-          <div>Image to display <span id="barimage"></span></div>
-            
-          <div>Bar Comment <span id="barComment"></span></div>
-            
-
-         <form>
-          <label for="comment">Make a comment:</label><br>
-          <input type="text" id="comment" name="comment" value="make your comment here"><br><br>
-          <input type="submit" value="Submit">
-         </form>
-            
-         </div>
-        </details>
-      </section>
-
-    </section>
-
-  </div>
-</section>
+{{/each}}

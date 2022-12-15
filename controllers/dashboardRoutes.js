@@ -15,19 +15,27 @@ router.get('/', withAuth, async (req, res) => {
     });
 
   } catch (error) {
-    res.status(500).json({ message: 'Error from dashbaord get' });
+    res.status(500).json({ message: "ERROR FROM DASH" });
   }
     
 });
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
+router.get('/post/:id', withAuth, async (req, res) => {
+  try {
+        
+    const postData = await Post.findByPk({ include : [User] [Comment] });
 
-  res.render('login');
+    const post = postData.map(post => post.get({ plain : true }));
+
+    res.render('dashboard', {
+        post,
+        logged_in: req.session.logged_in
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: "ERROR FROM DASH" });
+  }
+    
 });
 
 module.exports = router;
