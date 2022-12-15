@@ -1,85 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="Develop/public/media/favicon-32x32.png">
-    <title>TIPSY AGE VERIFICATION</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipsy Reviews</title>
+  <link rel="stylesheet" href="../../public/css/style.css">
+  <link rel="stylesheet" href="../../public/css/ageStyle.css">
 </head>
+
 <body>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:600,900,400' rel='stylesheet' type='text/css'>
-
-  
-
- <div class="flex-column justify-space-around">
-
-<video autoplay muted loop id="myVideo" src="/public/media/glass.mp4" type="video/mp4">
-  {{!-- <source src="/public/media/glass.mp4" type="video/mp4"> --}}
-</video>
-  
-    <div class="age">
-      <h1>Age Verification
-      <p>Please enter your date of birth:</p>
-      <form >
-      <input type="date" id="dateInput" name="bday"></input>
-      <input type="submit" id="submit" value="Submit">
-      </form>
-      
-    
-     
-
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">💸</span>
+        <a href="/">Tipsy</a>
       </h1>
-
-      
-<script>
-src="/public/js/age.js"
-console.log("this was the date selected: " + dateInput);
-
-</script>
-
-    </div>
-    
-    
-    
-    
-    
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-
-   
-    {{#if age}}
-    <script src="/public/js/age.js"></script>
-   
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        {{!-- <a href="/profile">profile</a> | --}}
+        <a href="/dashboard">dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
       </nav>
-   
-
-
-
-    {{{ body }}}
-
-     {{/if}}
-
-    
-    
-    
-    
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
     </main>
-
-
-
-
     <footer>
-      <p id="caption">Be respectful and always drink responsibily.</p>
+      
     </footer>
   </div>
 
@@ -90,4 +42,3 @@ console.log("this was the date selected: " + dateInput);
 </body>
 
 </html>
-
