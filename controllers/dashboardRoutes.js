@@ -1,17 +1,23 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { User, Post, Comment, Bar } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
-   
-    // Pass serialized data and session flag into template
-    res.render('dashboard', { 
-      logged_in: req.session.logged_in 
+        
+    const postData = await Post.findAll({ include : [User] });
+
+    const posts = postData.map(post => post.get({ plain : true }));
+
+    res.render('dashboard', {
+        posts,
+        logged_in: req.session.logged_in
     });
-  } catch (err) {
-    res.status(500).json(err);
+
+  } catch (error) {
+    res.status(500).json({ message: 'Error from dashbaord get' });
   }
+    
 });
 
 router.get('/login', (req, res) => {
