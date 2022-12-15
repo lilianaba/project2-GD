@@ -12,13 +12,22 @@
     <section id="mainContent">
       <div class="barList">
           
-        <div class="bar01">BAR 01 <span id="bar01"></span></div>
-            
-        <div class="bar02">BAR 02<span id="bar02"></span></div>
-            
-        <div class="bar03">BAR 03 <span id="bar03"></span></div>
-            
-        <div class="bar04">BAR 04<span id="bar04"></span></div>
+
+  <h2>{{bar.name}}</h2>
+  {{!-- <p>{{{get_emoji}}}</p> --}}
+  <p>{{Post.post_content}}</p>
+  <p>{{Post.rating}}</p>
+  <p>Posted by {{user.username}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+
+
         
       </div>
 
