@@ -33,9 +33,9 @@ Comment.belongsTo(Post, {
 //     foreignKey: 'bar_id'
 // });
 
-// Bar.belongsTo(Post, {
-//     foreignKey: 'bar_id'
-// });
+Bar.hasMany(Post, {
+    foreignKey: 'bar_id'
+});
 
 Post.belongsTo(Bar, {
     foreignKey: 'bar_id'
