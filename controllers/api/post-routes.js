@@ -8,6 +8,9 @@ router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({})
         res.status(200).json(postData)
+        // res.render('createPost', {
+        
+        // })
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
