@@ -23,6 +23,7 @@ document.getElementById("dateInput").addEventListener("change", function() {
 
     console.log(userDOB[2] + " : " + userDOB[1] + " : " + userDOB[0]);
     console.log(age);
+    //redirect.
 
     if (age <= 18) {
 
