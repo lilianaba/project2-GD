@@ -65,6 +65,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+// router.get('/:id', async (req, res) => {
+//     try {
+//       const barData = await Bar.findByPk(req.params.id, {
+//         include: [{ model: Post }],
+//       });
+//       console.log(barData);
+//       res.status(200).json(barData);
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
+
 // // GET a single driver
 // router.get('/:id', async (req, res) => {
 //   try {
