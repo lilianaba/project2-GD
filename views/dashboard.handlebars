@@ -1,13 +1,9 @@
-{{#each posts as |post|}}
+{{#each bars as |bar|}}
   <section>
     <div>
       <div class="barList">
-        <h2>{{post.title}}</h2>
-        {{!-- <p>{{{get_emoji}}}</p> --}}
-        <p>{{post.post_content}}</p>
-        <p>{{post.rating}}</p>
-        <p>{{format_date post.post_date}}</p>
-
+        <h2>{{bar.name}}</h2>
+        <p>{{bar.ratingAvg}}</p>
       </div>
     </div>
   </section>
