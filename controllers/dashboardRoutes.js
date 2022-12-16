@@ -11,7 +11,6 @@ router.get('/', withAuth, async (req, res) => {
       attributes: { 
         include: [
           [
-            // Use plain SQL to add up the total mileage
             sequelize.literal(
               '(select avg(rating) from post where post.bar_id = bar.id)'
             ),
@@ -39,16 +38,22 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/bar/:id', withAuth, async (req, res) => {
   try {
         
-    const barData = await Bar.findByPk({ include : [Post] });
+    const barData = await Bar.findByPk(req.params.id, { include : [
+      { model: Post }
+    ],
+   });
 
-    const bar = barData.map(bar => bar.get({ plain : true }));
+    const bar = barData.get(bar => bar.get({ plain : true }));
 
-    res.render('dashboard', {
+    console.log(bar);
+
+    res.render('barposts', {
         bar,
         logged_in: req.session.logged_in
     });
 
   } catch (error) {
+    console.log(error);
     res.status(500).json(error);
   }
     

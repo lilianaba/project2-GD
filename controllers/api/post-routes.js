@@ -7,10 +7,8 @@ const withAuth = require('../../utils/auth');
 router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({})
-        res.status(200).json(postData)
-        // res.render('createPost', {
-        
-        // })
+        res.status(200).json(postData);
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -20,13 +18,20 @@ router.get("/", async (req, res) => {
 // Makes a review 
 router.post("/", withAuth, async (req, res) => {
     try {
-        console.log("creating");
-        const postData = await Post.create({
-            title: req.body.title,
-            post_content: req.body.post_content,
-            rating: req.session.rating
-        },
-            res.status(200).json(postData))
+        // console.log("creating");
+        // const postData = await Post.create({
+        //     title: req.body.title,
+        //     post_content: req.body.post_content,
+        //     rating: req.session.rating
+        // },
+        //     res.status(200).json(postData))
+
+            const newPosts = await Post.create({
+                ...req.body,
+                bar_id: req.session.bar_id,
+                user_id: req.session.user_id,
+            });
+            res.json(newPosts);
 
     } catch (err) {
         console.log(err);
