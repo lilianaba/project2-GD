@@ -1,14 +1,15 @@
 <div class="container">
     <h2>Test</h2>
     <h2>{{bar.name}}</h2>
-    {{!-- {{#each bar.posts as |posts|}}
-    
-    {{/each}} --}}
-    
-    <h3>{{Post.post-title}}</h3>
-    <p>{{Post.post-content}}</p>
-    <p>{{Post.rating}}</p>
+    {{#each posts as |post|}}
+    <h3>{{post.title}}</h3>
+    <p>{{post.post-content}}</p>
+    <p>{{post.rating}}</p>
 
+    {{/each}}
+    
+    
+ <button type="submit" class="btn">Make a new post</button>
 
 
 </div>
