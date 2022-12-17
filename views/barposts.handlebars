@@ -1,7 +1,15 @@
 <div class="container">
     <h2>Test</h2>
     <h2>{{bar.name}}</h2>
-    {{!-- {{#each bar.posts as |posts|}}
+    {{#each posts as |post|}}
+    <h3>{{post.title}}</h3>
+    <p>{{post.post-content}}</p>
+    <p>{{post.rating}}</p>
+
+    {{/each}}
     
-    {{/each}} --}}
+    
+ <button type="submit" class="btn">Make a new post</button>
+
+
 </div>

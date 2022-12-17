@@ -35,19 +35,53 @@ router.get('/', withAuth, async (req, res) => {
     
 });
 
+// router.get('/bar/:id', withAuth, async (req, res) => {
+//   try {
+        
+//     const postData = await Post.find(req.params.bar_id, {
+//       attributes: { 
+//         include: [
+//           [
+//             sequelize.literal(
+//               '(select * from post where post.bar_id = bar.id)'
+//             ),
+//             'ratingAvg',
+//           ],
+//         ],
+//       },
+  
+//    });
+
+//     const post = barData.get(post => post.get({ plain : true }));
+
+//     console.log(post);
+
+//     res.render('barposts', {
+//         bar,
+//         logged_in: req.session.logged_in
+//     });
+
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json(error);
+//   }
+    
+// });
+
+
+
 router.get('/bar/:id', withAuth, async (req, res) => {
   try {
-        
-    const barData = await Bar.findByPk(req.params.id, { include : [
-      { model: Post }
-    ],
-   });
+    
+    const barData = await Bar.findOne({where:{id:req.params.id}});
+    const bar = barData.get({ plain : true });
 
-    const bar = barData.get(bar => bar.get({ plain : true }));
+    const postData = await Post.findAll({where:{bar_id:req.params.id}});
 
+    const posts = postData.map(post => post.get({ plain : true }));
     console.log(bar);
-
     res.render('barposts', {
+        posts,
         bar,
         logged_in: req.session.logged_in
     });
@@ -58,6 +92,7 @@ router.get('/bar/:id', withAuth, async (req, res) => {
   }
     
 });
+
 
 // router.get('/', withAuth, async (req, res) => {
 //   try {
