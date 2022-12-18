@@ -1,15 +1,53 @@
 <div class="container">
-    <h2>Test</h2>
+    {{!-- <h2>Test</h2> --}}
     <h2>{{bar.name}}</h2>
     {{#each posts as |post|}}
     <h3>{{post.title}}</h3>
-    <p>{{post.post-content}}</p>
-    <p>{{post.rating}}</p>
+    <p>{{post.post_content}}</p>
+    <p>Rating: {{post.rating}}</p>
 
     {{/each}}
     
-    
- <button type="submit" class="btn">Make a new post</button>
+
+<article class="new-post">
+    <section class="new-form-page">
+        <div class="form-heading">
+            <h2>Create New Review</h2>
+        </div>
+        <div class="form-section">
+            <form class="new-post-form">
+                {{!-- <div class="post-title-section"> --}}
+                    <label for="post.title">Title</label>
+                     <br />
+                    <textarea id="post_title" name="post_title" rows="2" cols="30">
+                     {{post.title}}
+                    </textarea>
+                    <br />
+          {{!-- </div> --}}
+                  <label for="post.title">Your post</label>
+                     <br />
+                    <textarea id="post_content" name="post_content" rows="2" cols="30">
+                     {{post.post_content}}
+                    </textarea>
+                    <br />
+                <div class="post-rating-section">
+                    <label for="rating">Rating</label>
+        
+       
+                    <input type="radio" name="stars" value="5" id="rating" name="rating" />
+                                 <span class="icon">★</span>
+                        
+                </div>
+                <br />
+                <button type="submit" class="btn">Create</button>
+            </form>
+        </div>
+    </section>
+</article>
+{{!-- 
+<script src="../public/js/addpost.js"></script> --}}
+
+ {{!-- <button type="submit" class="btn">Make a new post</button> --}}
 
 
 </div>
