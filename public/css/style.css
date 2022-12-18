@@ -10,70 +10,46 @@
     --background: grey;
     --light: #fff;
     --navlink-color: #b9c6ae;
+    --font: black ;
+    --lines:rgb(97, 94, 94);
   }
   
   body {
     position: relative;
     font-family: "Goudy Bookletter 1911", sans-serif;
-    font-size: 20px;
+    /* font-size: 20px; */
     /* background-color: #FDF8F5; */
     color: #4F4846;
   }  
+.flex-column{
+  position: relative;
+}
+.flex-column a{
+  font-size: 80px;
+  text-decoration: none;
+  color:var(--font)
+}
+.flex-column nav a{
+  font-size: 40px;
+}
 
-  .age{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: greenyellow solid 3px;
-    text-align: center;
-    height: 95vh;
-  }
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    /* z-index: -1; */
-    background-size: cover;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
-  
+footer {
+  background-color: var(--background);
+  border-top: 5px solid var(--lines); 
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
 
-  main{
-    flex-wrap: wrap;
-  }
-  #mainContent{
-    border: #b9c6ae solid 1px;
-    display: flex;
-    align-items: center;
-    
-  }
+footer p {
+  margin: 2%; 
+  color: var(--light); 
+  text-align: center;
+}
+.barList a, p{
+  font-size: 40px;
+  text-align: center;
 
-  .barList{
-    width: 50%;
-
-  }
-
-  #left{
-    width: 50%;
-  }
-
-  .sortByOptions{
-    position: relative;
-    align-items: center;
-    width: 100%;
-    font-size: 80px;
-    /* background-color:var(--background); */
-
-  }
-
-  #sortby{
-    position: relative;
-    font-size: 40px;
-    align-content: center;
-    -ms-flex-align: center;
-  }
+}
