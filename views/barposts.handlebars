@@ -1,15 +1,17 @@
+<h2>{{bar.name}}</h2>
+<div class="image"><img data-id="{{bar.id}}" src="{{bar.img_url}}" width="500" /></div>
 <div class="container">
     {{!-- <h2>Test</h2> --}}
-    <h2>{{bar.name}}</h2>
+    
     {{#each posts as |post|}}
     <h3>{{post.title}}</h3>
     <p>{{post.post_content}}</p>
     <p>Rating: {{post.rating}}</p>
 
     {{/each}}
-    
+</div>
 
-<article class="new-post">
+<div class="new-post">
     <section class="new-form-page">
         <div class="form-heading">
             <h2>Create New Review</h2>
@@ -31,11 +33,23 @@
                     </textarea>
                     <br />
                 <div class="post-rating-section">
-                    <label for="rating">Rating</label>
+                    <label for="rating">Rating: </label>
+                      <div class="rate">
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 star</label>
+                    </div>
         
        
-                    <input type="radio" name="stars" value="5" id="rating" name="rating" />
-                                 <span class="icon">★</span>
+                    {{!-- <input type="radio" name="stars" value="5" id="rating" name="rating" />
+                                 <span class="icon">★</span> --}}
                         
                 </div>
                 <br />
@@ -43,11 +57,4 @@
             </form>
         </div>
     </section>
-</article>
-{{!-- 
-<script src="../public/js/addpost.js"></script> --}}
-
- {{!-- <button type="submit" class="btn">Make a new post</button> --}}
-
-
 </div>

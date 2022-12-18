@@ -27,16 +27,22 @@
 .flex-column a{
   font-size: 80px;
   text-decoration: none;
-  color:var(--font)
+  color:var(--light)
 }
 .flex-column nav a{
   font-size: 40px;
+  /* color: var(--font); */
 }
 
+header{
+  background-color: var(--background);
+  color: var(--light);
+}
 footer {
   background-color: var(--background);
   border-top: 5px solid var(--lines); 
   justify-content: center;
+  text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -47,9 +53,84 @@ footer p {
   margin: 2%; 
   color: var(--light); 
   text-align: center;
+  width: 100vw;
 }
-.barList a, p{
+
+.barList a{
   font-size: 40px;
   text-align: center;
+  color: var(--font);
+  /* display: inline; */
+  font-style: italic;
 
+}
+.barList p{
+  font-size: 40px;
+  text-align: center;
+  color: var(--font);
+  /* display: inline; */
+
+}
+section div{
+  padding:15px;
+  text-align: center;
+  /* border: solid 2px green; */
+  display: flex;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.container{
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  /* border: solid 3px orange; */
+}
+.container h3{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.container p{
+  font-size: 15px;
+}
+.new-post {
+  align-content: center;
 }

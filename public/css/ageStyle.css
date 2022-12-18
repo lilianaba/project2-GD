@@ -33,7 +33,7 @@ html, body{
     background-color: #090909;
     color: #fff;
     text-decoration: none;
-    display:inline-block;
+    /* display:inline-block; */
     letter-spacing: 0.1em;
     padding: 2px;
     
