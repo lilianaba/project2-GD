@@ -27,17 +27,27 @@
 .flex-column a{
   font-size: 80px;
   text-decoration: none;
-  color:var(--light)
+  color:var(--font);
 }
 .flex-column nav a{
   font-size: 40px;
-  /* color: var(--font); */
+  color: var(--font);
 }
 
 header{
-  background-color: var(--background);
-  color: var(--light);
+  /* background-color: var(--background); */
+  /* color:var(--font); */
+  height: 300px;
 }
+
+header img{
+  position: absolute;
+  z-index: -2;
+  /* height: 120px; */
+  width: 100vw;
+}
+
+
 footer {
   background-color: var(--background);
   border-top: 5px solid var(--lines); 
@@ -50,7 +60,7 @@ footer {
 }
 
 footer p {
-  margin: 2%; 
+  margin: 1%; 
   color: var(--light); 
   text-align: center;
   width: 100vw;
@@ -72,7 +82,7 @@ footer p {
 
 }
 section div{
-  padding:15px;
+  padding:10px;
   text-align: center;
   /* border: solid 2px green; */
   display: flex;
@@ -84,6 +94,7 @@ section div{
   float: left;
   height: 46px;
   padding: 0 10px;
+  flex-direction: row-reverse;
 }
 .rate:not(:checked) > input {
   position:absolute;

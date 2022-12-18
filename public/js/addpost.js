@@ -1,8 +1,9 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('textarea[name="post_title"]').value;
-    const post_content = document.querySelector('textarea[name="post_content"]').value.trim();
+    const title = document.querySelector('#post_title').value;
+    const post_content = document.querySelector('#post_content').value;
+    const rating = document.querySelector('name="rate"').value;
 // need to add in the rating logic --- 
 
 
@@ -11,8 +12,9 @@ async function newFormHandler(event) {
         body: JSON.stringify({
             title,
             post_content,
-            rating
+            rating,
         }),
+
     });
 
     if (response.ok) {
