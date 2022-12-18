@@ -4,15 +4,14 @@ const apiRoutes = require('./api');
 // const ageRoutes = require('./ageRoutes');
 const dashboardRoutes = require('./dashboardRoutes');
 const homepageRoutes = require('./homepageRoutes');
-// const barpostRoutes = require('./barpostRoutes');
+// const barpostRoutes = require('./post-routes');
 // const error = require('./error');
 
 router.use('/', homepageRoutes);
 router.use('/api', apiRoutes);
 // router.use('/age', ageRoutes);
 router.use('/dashboard', dashboardRoutes);
-// app.use('/media', express.static(path.join(__dirname, '/public/media')));
-// router.use('/dashboard', barpostdRoutes);
+// router.use('/dashboard', barpostRoutes);
 // router.use('/error', error);
 
 // router.use((req, res) => {
