@@ -97,15 +97,15 @@ router.get('/bar/:id', withAuth, async (req, res) => {
 
 router.post('/bar/:id',withAuth, async (req, res) => {
   try {
-    const newpost = await Post.create({
+    const newPost = await Post.create({
 
       title: req.body.post_title,
       content: req.body.description,
       rating: req.body.rating,
       
     });
-    console.log(newpost);
-    res.status(200).json(newpost);
+    console.log(newPost);
+    res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
   }
