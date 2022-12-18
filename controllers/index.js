@@ -11,6 +11,7 @@ router.use('/', homepageRoutes);
 router.use('/api', apiRoutes);
 // router.use('/age', ageRoutes);
 router.use('/dashboard', dashboardRoutes);
+// app.use('/media', express.static(path.join(__dirname, '/public/media')));
 // router.use('/dashboard', barpostdRoutes);
 // router.use('/error', error);
 
