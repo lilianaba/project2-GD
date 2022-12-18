@@ -43,7 +43,7 @@ header{
 header img{
   position: absolute;
   z-index: -2;
-  /* height: 120px; */
+  height: 250px;
   width: 100vw;
 }
 
