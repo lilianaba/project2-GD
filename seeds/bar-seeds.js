@@ -19,17 +19,17 @@ const barData = [
 {
     name: "Pink Moon Saloon",
     address: "21 Leigh St, Adelaide SA 5000",
-    img_url: "/media/bar2.jpg"
+    img_url: "/media/bar4.jpg"
 },
 {
     name: "The Sorcerer's Bar",
     address: "25B Bank St, Adelaide SA 5000",
-    img_url: "/media/bar2.jpg"
+    img_url: "/media/bar5.jpg"
 },
 {
     name: "Bank Street Social",
     address: "48 Hindley St, Adelaide SA 5000",
-    img_url: "/media/bar2.jpg"
+    img_url: "/media/bar6.jpg"
 }
 ]
 

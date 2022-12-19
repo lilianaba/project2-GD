@@ -26,27 +26,43 @@ const postData = [
         rating: 2
     },
     {
-        title: 'Best Wine Ever!',
-        post_content: 'This bar had the best wine in the world, you have to try them!',
+        title: 'Best People Ever!',
+        post_content: 'This bar had the best people to interact with in the world',
         post_date: '2022-08-12',
         user_id: 3,
         bar_id: 4,
-        rating: 2
+        rating: 5
     },
     {
-        title: 'Best Wine Ever!',
-        post_content: 'This bar had the best wine in the world, you have to try them!',
+        title: 'Enjoyable!',
+        post_content: 'Had a great time. Felt very safe.',
         post_date: '2022-08-12',
         user_id: 3,
         bar_id: 5,
-        rating: 2
+        rating: 5
     },
     {
-        title: 'Best Wine Ever!',
-        post_content: 'This bar had the best wine in the world, you have to try them!',
+        title: 'Loved it!',
+        post_content: 'This bar has the best drinks!',
         post_date: '2022-08-12',
         user_id: 3,
-        bar_id: 3,
+        bar_id: 6,
+        rating: 4
+    },
+    {
+        title: 'Loved it!',
+        post_content: 'This bar has the best drinks!',
+        post_date: '2022-08-12',
+        user_id: 3,
+        bar_id: 1,
+        rating: 5
+    },
+    {
+        title: 'Got sooo drunk!',
+        post_content: 'The bar staff kept serving me more and more :(',
+        post_date: '2022-08-12',
+        user_id: 3,
+        bar_id: 1,
         rating: 2
     },
 ]
