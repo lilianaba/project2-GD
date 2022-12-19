@@ -1,11 +1,11 @@
 {{#each bars as |bar|}}
   <section>
     <div>
-        <p>Bar rating: {{bar.ratingAvg}}</p>
+        {{!-- <p>Bar rating: {{bar.ratingAvg}}</p> --}}
         <div class="image"><img data-id="{{bar.id}}" src="{{bar.img_url}}" width="500" /></div>
       <div class="barList">
         <a href="/dashboard/bar/{{bar.id}}">{{bar.name}}</a>
-        <p>Bar rating: {{bar.ratingAvg}}</p>
+        <p> - Bar rating: {{bar.ratingAvg}}</p>
       </div>
     </div>
   </section>
