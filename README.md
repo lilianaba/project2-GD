@@ -35,11 +35,10 @@ When I can sort the bars by name or rating (ASC/DES)
 
 ```
 
-When I open the Tipsy website and I am asked my date of birth
-When My date of birth either will allow me to log in/sign up or restrict access to the website.
-When I can create comments to a other posts.
-When I can add a picture to my post.
-When I can upload a picture to my profile.
+Limit user acces to only over 18 years old.
+Be able to create comments to a other posts.
+Be able to add a picture to my post.
+Be able to create more bars and update status to close
 
 ```
 
