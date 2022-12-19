@@ -7,10 +7,11 @@
 /* create custom CSS variables (also called custom properties) and apply them to the root of the page, making them accessible to all other CSS */
 :root {
     /* declare a variable with `--` syntax */
-    --background: grey;
+    --background: #332b33;
     --light: #fff;
     --navlink-color: #b9c6ae;
     --font: black ;
+    --fontheader:#e8ccc1  ;
     --lines:rgb(97, 94, 94);
   }
   
@@ -27,24 +28,37 @@
 .flex-column a{
   font-size: 80px;
   text-decoration: none;
-  color:var(--font);
+  color:var(--fontheader);
+  z-index: 1;
+  padding-left: 45px;
 }
 .flex-column nav a{
   font-size: 40px;
-  color: var(--font);
+  color: var(--fontheader);
+  z-index: 1;
+  padding-left: 40px;
 }
 
-header{
+.flex-column nav a:hover, .flex-column a:hover {
+  cursor: pointer; 
+}
+
+
+
+.display-flex{
+  height: 250px;
   /* background-color: var(--background); */
-  /* color:var(--font); */
-  height: 300px;
 }
 
 header img{
   position: absolute;
-  z-index: -2;
   height: 250px;
   width: 100vw;
+  top: 0;
+  left: 0;
+  align-content: center;
+  z-index: -1;
+
 }
 
 
@@ -61,7 +75,8 @@ footer {
 
 footer p {
   margin: 1%; 
-  color: var(--light); 
+  font-size: 20px;
+  color: var(--fontheader); 
   text-align: center;
   width: 100vw;
 }
@@ -140,8 +155,77 @@ section div{
   font-size: 20px;
 }
 .container p{
-  font-size: 15px;
+  font-size: 30px;
 }
 .new-post {
   align-content: center;
+}
+
+.login-card{
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+
+.login-card label{
+  text-align: right;
+  display: inline-block;
+  width: 200px;
+}
+
+.login-card input{
+  text-align: left;
+}
+.form-group button{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+.homepage h2{
+  text-align: center;
+  padding-top: 25%;
+}
+
+/* responsive styles */
+@media screen and (max-width: 985px) {  
+  .image {
+      width: 50%; 
+  }
+
+  .container, section div{
+   flex-direction: column; 
+}
+.login-card label{
+  text-align: left;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .container, section div {
+    flex-direction: column; 
+}
+.image {
+  width: 50%; 
+}
+.login-card label{
+  text-align: left;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+  .container, section div{
+    flex-direction: column; 
+  }
+
+  .image {
+      width: 50%; 
+  }    
+  .login-card label{
+    text-align: left;
+  } 
 }

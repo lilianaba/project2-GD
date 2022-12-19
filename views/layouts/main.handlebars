@@ -12,15 +12,16 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-   <img src="/media/error.jpg" alt="Tipsy banner">
+   <img src="/media/header.gif" alt="Tipsy banner">
       <h1>
-        {{!-- <span role="img" aria-label="money">💸</span> --}}
-        <a href="/">Tipsy</a>
+       <br />
+       <br />
+       <a href="/">       Tipsy</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/dashboard">Dashboard</a>
+        <a href="/dashboard">       Dashboard</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
