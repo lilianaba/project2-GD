@@ -49,12 +49,21 @@ Be able to create more bars and update status to close
 
 ## Mock-Up
 
-The following animation demonstrates the application functionality:
+The following images demonstrates the application functionality:
 
 ![](./assets/images/Pick%20a%20Pup.gif)
 
 
 ## Installation
+npm i 
+mysql -u root -p
+source db/schema.sql
+use tipsy_db
+quit
+npm run seed
+npm start
+
+
 
 
 ## Credits
