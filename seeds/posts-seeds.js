@@ -25,6 +25,30 @@ const postData = [
         bar_id: 3,
         rating: 2
     },
+    {
+        title: 'Best Wine Ever!',
+        post_content: 'This bar had the best wine in the world, you have to try them!',
+        post_date: '2022-08-12',
+        user_id: 3,
+        bar_id: 4,
+        rating: 2
+    },
+    {
+        title: 'Best Wine Ever!',
+        post_content: 'This bar had the best wine in the world, you have to try them!',
+        post_date: '2022-08-12',
+        user_id: 3,
+        bar_id: 5,
+        rating: 2
+    },
+    {
+        title: 'Best Wine Ever!',
+        post_content: 'This bar had the best wine in the world, you have to try them!',
+        post_date: '2022-08-12',
+        user_id: 3,
+        bar_id: 3,
+        rating: 2
+    },
 ]
 
 const seedPosts = () => Post.bulkCreate(postData);
