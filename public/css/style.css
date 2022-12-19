@@ -161,6 +161,31 @@ section div{
   align-content: center;
 }
 
+.login-card{
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+
+.login-card label{
+  text-align: right;
+  display: inline-block;
+  width: 200px;
+}
+
+.login-card input{
+  text-align: left;
+}
+.form-group button{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+
 /* responsive styles */
 @media screen and (max-width: 985px) {  
   .image {
@@ -170,8 +195,9 @@ section div{
   .container, section div{
    flex-direction: column; 
 }
-
-
+.login-card label{
+  text-align: left;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -180,6 +206,9 @@ section div{
 }
 .image {
   width: 50%; 
+}
+.login-card label{
+  text-align: left;
 }
 
 }
@@ -192,5 +221,7 @@ section div{
   .image {
       width: 50%; 
   }    
-  
+  .login-card label{
+    text-align: left;
+  } 
 }
