@@ -76,7 +76,7 @@ npm start
 ## License
 MIT License
 
-Copyright (c) [2022] [Lara Grocke], [Rickelle Griffith], [Liliana Bazand],[Fatin Mehdi]
+Copyright (c) [2022] [Lara Grocke], [Rickelle Griffith], [Liliana Bazand], [Fatin Mehdi]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
