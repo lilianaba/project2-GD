@@ -190,10 +190,20 @@ section div{
   padding-top: 25%;
 }
 
+.new-form-page{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items:center;
+}
+
 /* responsive styles */
 @media screen and (max-width: 985px) {  
-  .image {
+  .image img{
       width: 50%; 
+      align-items: center;
+      text-align: center;
   }
 
   .container, section div{
@@ -202,17 +212,30 @@ section div{
 .login-card label{
   text-align: left;
 }
+main .image{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
 }
 
 @media screen and (max-width: 768px) {
   .container, section div {
     flex-direction: column; 
 }
-.image {
+.image img{
   width: 50%; 
 }
 .login-card label{
   text-align: left;
+  
+}
+main .image{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 }
@@ -221,11 +244,16 @@ section div{
   .container, section div{
     flex-direction: column; 
   }
-
-  .image {
+ .image img {
       width: 50%; 
   }    
   .login-card label{
     text-align: left;
   } 
+  main .image{
+    display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  }
 }
