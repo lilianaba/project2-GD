@@ -15,6 +15,21 @@ const barData = [
     name: "NOLA",
     address: "28 Vardon Ave, Adelaide SA 5000",
     img_url: "/media/bar3.jpg"
+},
+{
+    name: "Pink Moon Saloon",
+    address: "21 Leigh St, Adelaide SA 5000",
+    img_url: "/media/bar2.jpg"
+},
+{
+    name: "The Sorcerer's Bar",
+    address: "25B Bank St, Adelaide SA 5000",
+    img_url: "/media/bar2.jpg"
+},
+{
+    name: "Bank Street Social",
+    address: "48 Hindley St, Adelaide SA 5000",
+    img_url: "/media/bar2.jpg"
 }
 ]
 

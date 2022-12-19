@@ -1,7 +1,6 @@
 <h2>{{bar.name}}</h2>
 <div class="image"><img data-id="{{bar.id}}" src="{{bar.img_url}}" width="500" /></div>
 <div class="container">
-    {{!-- <h2>Test</h2> --}}
     
     {{#each posts as |post|}}
     <h3>{{post.title}}</h3>
@@ -12,31 +11,28 @@
 </div>
 
 <div class="new-post">
-    <section class="new-form-page">
+    
         <div class="form-heading">
             <h2>Create New Review</h2>
         </div>
+
         <div class="form-section">
-            <form class="new-post-form">
-                {{!-- <div class="post-title-section"> --}}
+
+            <form id="new-post-form">
+
                     <label for="post_title">Title</label>
-                     <br />
-                    <textarea id="post_title" name="post_title" rows="2" cols="30">
-                     {{post.title}}
-                    </textarea>
-                    <br />
-          {{!-- </div> --}}
-                  <label for="post_content">Your post</label>
-                     <br />
-                    <textarea id="post_content" name="post_content" rows="2" cols="30">
-                     {{post.post_content}}
-                    </textarea>
-                    <br />
+                    <input id="post_title" name="post_title"></input>
+                    
+                    <label for="post_content">Your post</label>
+                    <textarea id="post_content" name="post_content" rows="4"></textarea>
+
                 <div class="post-rating-section">
+
                     <label for="rating">Rating: </label>
+
                       <div class="rate">
                         <input type="radio" id="star1" name="rate" value="1" />
-                        <label for="star1" title="text">1 stars</label>
+                        <label for="star1" title="text">1 star</label>
                         <input type="radio" id="star2" name="rate" value="2" />
                         <label for="star2" title="text">2 stars</label>
                         <input type="radio" id="star3" name="rate" value="3" />
@@ -44,13 +40,16 @@
                         <input type="radio" id="star4" name="rate" value="4" />
                         <label for="star4" title="text">4 stars</label>
                         <input type="radio" id="star5" name="rate" value="5" />
-                        <label for="star5" title="text">5 star</label>
+                        <label for="star5" title="text">5 stars</label>
                     </div>
-        
+                    
                 </div>
+
                 <button type="submit" class="btn">Create</button>
+
             </form>
+
         </div>
-    </section>
+
 </div>
 <script src="/js/addpost.js"></script>
