@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tipsy!</title>
+  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
   {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,17 +48,15 @@
 
       </main>
 
-
     <footer>
-      <p>Tipsy © 2022 - By Group D</p>
+    <p>Tipsy © 2022</p>
     </footer>
-
   </div>
 
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
 </body>
 
 </html>

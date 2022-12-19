@@ -227,6 +227,29 @@ nav li > .nav-object {
     color: #c59b08;
 }
 
+/* Login Page Selectors */
+.login-page {
+    font-family: 'Chivo Mono', monospace;
+}
+.login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.signup-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.btn-primary {
+    font-family: 'Chivo Mono', monospace;
+    font-size: 15px;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     display: block;
