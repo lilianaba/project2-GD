@@ -185,6 +185,10 @@ section div{
   align-items: center;
   padding: 5px;
 }
+.homepage h2{
+  text-align: center;
+  padding-top: 25%;
+}
 
 /* responsive styles */
 @media screen and (max-width: 985px) {  
