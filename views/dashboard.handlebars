@@ -4,9 +4,11 @@
   {{#each bars as |bar|}}
     <a id="displayed-bars" href="/dashboard/bar/{{bar.id}}">
       <div id="bar-div">
-          <p class="bar-contents">{{bar.name}}</p>
+        <div id="bar-words">
+          <p class="bar-contents bar-name">{{bar.name}}</p>
           <p class="bar-contents">Rated {{bar.ratingAvg}} Stars</p>
           <p class="bar-contents">Located at {{bar.address}}</p>
+        </div>
           <div class="image bar-contents"><img data-id="{{bar.id}}" src="{{bar.img_url}}" width="500" /></div>
       </div>
     </a>
